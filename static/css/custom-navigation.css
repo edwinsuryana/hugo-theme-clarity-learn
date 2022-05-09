@@ -126,3 +126,20 @@ ul.nav-list.treeview {
 	left: 35px;
 	bottom: 5px;
 }
+
+/* ajax live search */
+#live-filter-navigation ul#content { list-style-type:none;position:absolute;z-index:10;padding:0; }
+#live-filter-navigationul#content.active { border:1px solid #ccc;background-color: #fff;padding:5px 0; }
+#live-filter-navigation ul#content li {
+  background-color: #e2eaed;margin:5px 10px;padding:5px 10px;
+  border: 1px solid #8ed0e8;
+}
+#live-filter-navigation ul#content li a {
+  color: #428bca;
+  text-decoration: none;
+  padding: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
