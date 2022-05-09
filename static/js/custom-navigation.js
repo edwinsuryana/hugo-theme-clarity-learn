@@ -293,9 +293,9 @@
 			containsNot.hide();
 
 			if (val === '') {
-				contains.show();
-				containsNot.show();
-        $('ul.nav-list.treeview').css('display', 'none');
+				// contains.show();
+				// containsNot.show();
+        // $('ul.nav-list.treeview').css('display', 'none');
         $('#live-filter-navigation ul#content').empty().removeClass('active');
 			}
 			else
@@ -320,7 +320,7 @@
           }
         });
 
-        $('ul.nav-list.treeview').css('display', 'block');
+        // $('ul.nav-list.treeview').css('display', 'block');
       }
 
 			options.after.call(this, contains, containsNot);
