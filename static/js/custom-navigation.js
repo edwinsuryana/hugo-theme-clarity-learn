@@ -297,7 +297,6 @@
 				containsNot.show();
         $('ul.nav-list.treeview').css('display', 'none');
         $('#live-filter-navigation ul#content').empty().removeClass('active');
-        $(".sidenav-content").css('visibility', 'visible');
 			}
 			else
       {
@@ -321,7 +320,6 @@
           }
         });
 
-        $(".sidenav-content").css('visibility', 'hidden');
         $('ul.nav-list.treeview').css('display', 'block');
       }
 
@@ -340,7 +338,7 @@ $(document).ready(function() {
 		persist: "location"
 	});
 
-	$('#sidebar.sidenav').liveFilter('#livefilter-input', '.topics.nav-list li', {
+	$('#sidebar2.sidenav').liveFilter('#livefilter-input', '.topics.nav-list li', {
 	});
 
 	$("#live-filter-navigation #livefilter-input").attr('placeholder', 'Search for title');
