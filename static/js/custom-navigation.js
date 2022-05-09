@@ -294,10 +294,12 @@
 
 			if (val === '') {
         $('#live-filter-navigation ul#content').empty().removeClass('active');
+        $('#search-results').removeClass('active');
 			}
 			else
       {
         $('#live-filter-navigation ul#content').empty().addClass('active');
+        $('#search-results').addClass('active');
         $('#search-results .tutup').addClass('active');
 
         var parentTitle = '';
@@ -343,6 +345,7 @@ $(document).ready(function() {
 
   $("#search-results .tutup").on('click', function() {
     $('#live-filter-navigation ul#content').empty().removeClass('active');
+    $('#search-results').removeClass('active');
   });
 
 

@@ -149,9 +149,13 @@ ul.nav-list.treeview {
   padding: 0;
   position: absolute;
   z-index: 1000;
+}
+
+#search-results.active {
   overflow: scroll;
   overflow-y: visible;
 }
+
 #search-results .tutup {
   position: absolute;
   visibility: hidden;
