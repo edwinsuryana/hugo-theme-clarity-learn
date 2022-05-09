@@ -1,7 +1,9 @@
 <nav id="sidebar" class="sidenav ">
   <div id="live-filter-navigation"><label id="search-label-livefilter" for="livefilter-input"><input
     id="livefilter-input" type="text" value="" class="search"></label>
-    <ul id="content"></ul>
+    <div id="search-results">
+      <ul id="content"></ul>
+    </div>
   </div>
   <section class="sidenav-content">
     {{ partial "menu.html" . }}
@@ -9,9 +11,6 @@
 </nav>
 
 <nav id="sidebar2" class="sidenav" style="display: none;">
-  <div id="live-filter-navigation"><label id="search-label-livefilter" for="livefilter-input"><input
-    id="livefilter-input" type="text" value="" class="search"></label>
-  </div>
   <section class="sidenav-content">
     {{ partial "menu.html" . }}
   </section>
