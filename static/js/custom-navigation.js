@@ -302,17 +302,30 @@
         $('#search-results').addClass('active');
         $('#search-results .tutup').addClass('active');
 
-        var parentTitle = '';
+        var parentTitle = '',
+            navid = '',
+            navtitle = '';
         $('ul.nav-list.treeview li').each(function(index, value) {
           if ($(value).hasClass('expandable')) {
             parentTitle = $.trim($(value).eq(0).find('a').eq(0).text());
+            navid = $(value).attr('data-nav-id');
+            navtitle = parentTitle;
           }
-          var navid = $(value).attr('data-nav-id');
-          var navtitle = $.trim($(value).find('a').text());
+          else
+          {
+            navid = $(value).attr('data-nav-id');
+            navtitle = $.trim($(value).find('a').text());
+          }
 
           if (navtitle.toLowerCase().indexOf(val.toLowerCase()) !== -1)
           {
-            $("#live-filter-navigation ul#content").append('<li data-nav-id="'+navid+'"><a title="'+navtitle+'" href="'+navid+'">'+navtitle+' <span>'+parentTitle+'</span></a></li>');
+            if ($(value).hasClass('expandable')) {
+              $("#live-filter-navigation ul#content").append('<li data-nav-id="'+navid+'"><a title="'+parentTitle+'" href="'+navid+'">'+parentTitle+' <span>'+parentTitle+'</span></a></li>');
+            }
+            else
+            {
+              $("#live-filter-navigation ul#content").append('<li data-nav-id="'+navid+'"><a title="'+navtitle+'" href="'+navid+'">'+navtitle+' <span>'+parentTitle+'</span></a></li>');
+            }
           }
         });
       }
@@ -345,6 +358,10 @@ $(document).ready(function() {
     $(this).removeClass('active');
     $("#livefilter-input").val('');
   });
+
+  $('body').on('click', function() {
+    $('#search-results').removeClass('active');
+  })
 
 
 });

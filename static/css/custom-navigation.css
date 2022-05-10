@@ -151,6 +151,7 @@ ul.nav-list.treeview {
   padding: 0;
   position: relative;
   z-index: 1000;
+  display: none;
 }
 
 #search-results.active {
@@ -159,6 +160,7 @@ ul.nav-list.treeview {
   border: 1px solid #949494;
   box-shadow: 0 1.6px 3.6px 0 #b3b3b3, 0 0.3px 0.9px 0 #b3b3b3;
   position: fixed;
+  display: block;
 }
 
 #search-results .tutup {
@@ -170,6 +172,9 @@ ul.nav-list.treeview {
   z-index: 300;
   color: #d7d7d7;
   cursor: pointer;
+  text-decoration: none;
+}
+#search-results .tutup:hover {
   text-decoration: none;
 }
 #search-results .tutup.active {
